@@ -17,7 +17,7 @@ var classes = ["fc-ab-root"];
 var ids = ['google_ads_iframe'];
 
 var postDeletionAction = function () {
-	document.body.removeAttribute("style");
+  document.body.removeAttribute("style");
 }
 
 
