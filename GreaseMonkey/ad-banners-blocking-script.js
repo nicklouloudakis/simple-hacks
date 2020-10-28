@@ -2,6 +2,7 @@
 // @name     Ad banners blocking script
 // @version  1.0.0
 // @include  /^https:\/\/www.[^\.]*.gr/*/
+// @run-at   document-end
 // @grant    none
 // ==/UserScript==
 
