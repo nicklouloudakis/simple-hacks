@@ -12,14 +12,12 @@
 
 'use strict';
 
-
 var classes = ["fc-ab-root"];
 var ids = ['google_ads_iframe'];
 
 var postDeletionAction = function () {
   document.body.removeAttribute("style");
 }
-
 
 // Mutate objects so that in case an ad-blocking removal banner is found,
 // you remove it.
@@ -53,7 +51,7 @@ var adDeletionObserver = new MutationObserver(
   }
 );
 
-// Monitor body for changes.
+// Monitor document body for changes.
 var container = document.querySelector('body');
 
 adDeletionObserver.observe(container, {
