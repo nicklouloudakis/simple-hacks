@@ -12,11 +12,11 @@
 
 'use strict';
 
-var classes = ["fc-ab-root"];
+var classes = ['fc-ab-root'];
 var ids = ['google_ads_iframe'];
 
 var postDeletionAction = function () {
-  document.body.removeAttribute("style");
+  document.body.removeAttribute('style');
 }
 
 // Mutate objects so that in case an ad-blocking removal banner is found,
@@ -32,7 +32,7 @@ var adDeletionObserver = new MutationObserver(
 
             var anyClassFound = classes.some(function (element) {
               // Minor hack to avoid implicit conversion to another type.
-              return node.className && (node.className + "").indexOf(element) !== -1;
+              return node.className && (node.className + '').indexOf(element) !== -1;
             });
             var anyIdFound = ids.some(function(element) {
               return node.id && node.id.indexOf(element) !== -1;
