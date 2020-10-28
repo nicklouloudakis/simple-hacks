@@ -31,12 +31,13 @@ var adDeletionObserver = new MutationObserver(
           function(node) {
 
             var anyClassFound = classes.some(function (element) {
-              return node.className.indexOf(element) !== -1;
+              // Minor hack to avoid implicit conversion to another type.
+              return node.className && (node.className + "").indexOf(element) !== -1;
             });
             var anyIdFound = ids.some(function(element) {
-              return node.id.indexOf(element) !== -1;
+              return node.id && node.id.indexOf(element) !== -1;
             });
-            
+
             if(anyClassFound || anyIdFound) {
               // Remove node, in relation to its parent.
               node.parentNode.removeChild(node);
