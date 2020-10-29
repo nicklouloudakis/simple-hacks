@@ -54,7 +54,7 @@ var adDeletionObserver = new MutationObserver(
 );
 
 // Monitor document body for changes.
-var container = document.querySelector('body');
+var container = document.body;
 
 adDeletionObserver.observe(container, {
   childList: true,
